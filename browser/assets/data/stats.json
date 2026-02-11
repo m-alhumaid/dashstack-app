@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Total Users",
+    "value": 40689,
+    "trend": 8.5
+  },
+  {
+    "id": 2,
+    "title": "Total Orders",
+    "value": 10293,
+    "trend": 1.3
+  },
+  {
+    "id": 3,
+    "title": "Total Sales",
+    "value": 89000,
+    "trend": -4.3
+  },
+  {
+    "id": 4,
+    "title": "Total Pending",
+    "value": 2040,
+    "trend": 1.8
+  }
+]

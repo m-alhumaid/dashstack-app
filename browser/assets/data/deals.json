@@ -1,0 +1,22 @@
+[
+  { "product": "MacBook Pro", "location": "New York", "date": "12.01.2025", "price": 1899, "status": "Delivered", "month": "January" },
+  { "product": "iPhone 15", "location": "Chicago", "date": "18.01.2025", "price": 999, "status": "Pending", "month": "January" },
+
+  { "product": "iPad Air", "location": "Dallas", "date": "05.02.2025", "price": 799, "status": "Delivered", "month": "February" },
+  { "product": "Apple Watch", "location": "Miami", "date": "14.02.2025", "price": 399, "status": "Cancelled", "month": "February" },
+
+  { "product": "iMac", "location": "Houston", "date": "02.03.2025", "price": 2299, "status": "Delivered", "month": "March" },
+  { "product": "Mac Mini", "location": "Denver", "date": "19.04.2025", "price": 699, "status": "Pending", "month": "April" },
+
+  { "product": "iPhone 14", "location": "Seattle", "date": "23.05.2025", "price": 899, "status": "Delivered", "month": "May" },
+  { "product": "Mac Studio", "location": "San Diego", "date": "17.06.2025", "price": 1999, "status": "Delivered", "month": "June" },
+
+  { "product": "Apple TV", "location": "Orlando", "date": "08.07.2025", "price": 199, "status": "Pending", "month": "July" },
+  { "product": "AirPods Pro", "location": "Boston", "date": "06.08.2025", "price": 249, "status": "Delivered", "month": "August" },
+
+  { "product": "MacBook Air", "location": "Atlanta", "date": "09.09.2025", "price": 1199, "status": "Delivered", "month": "September" },
+  { "product": "iPhone 16", "location": "Philadelphia", "date": "15.10.2025", "price": 1099, "status": "Delivered", "month": "October" },
+
+  { "product": "Mac Pro", "location": "Charlotte", "date": "20.11.2025", "price": 4999, "status": "Pending", "month": "November" },
+  { "product": "Apple Watch Ultra", "location": "Washington", "date": "12.12.2025", "price": 799, "status": "Delivered", "month": "December" }
+]

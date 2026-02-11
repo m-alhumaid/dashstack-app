@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Apple Watch Series 4",
+    "price": 120,
+    "rating": 5,
+    "image": "assets/images/products/watch.png"
+  },
+  {
+    "id": 2,
+    "name": "Air Max 270",
+    "price": 150,
+    "rating": 4,
+    "image": "assets/images/products/shoes.png"
+  },
+  {
+    "id": 3,
+    "name": "Minimal Chair Tool",
+    "price": 90,
+    "rating": 4,
+    "image": "assets/images/products/chair.png"
+  }
+]

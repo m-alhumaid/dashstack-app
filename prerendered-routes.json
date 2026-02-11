@@ -1,0 +1,9 @@
+{
+  "routes": {
+    "/Program%20Files/Git/dashstack-app": {},
+    "/Program%20Files/Git/dashstack-app/favorites": {},
+    "/Program%20Files/Git/dashstack-app/orders": {},
+    "/Program%20Files/Git/dashstack-app/team": {},
+    "/Program%20Files/Git/dashstack-app/team/add": {}
+  }
+}
