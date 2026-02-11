@@ -1,0 +1,54 @@
+<h3 class="mb-4">Dashboard</h3>
+
+<div class="stats">
+  <div class="card stat" *ngFor="let s of stats">
+    <div class="stat-content">
+      <div class="title-wrapper">
+        <div class="small-muted">{{ s.title }}</div>
+        <div class="icon">
+          <img [src]="s.icon" alt="{{ s.title }}" width="40" height="40" />
+        </div>
+      </div>
+      <h4>{{ s.value | number }}</h4>
+      <small [ngClass]="{'text-success': s.trend > 0, 'text-danger': s.trend < 0}">
+        {{ s.trend > 0 ? '+' : ''}}{{ s.trend }}% up from yesterday
+      </small>
+    </div>
+  </div>
+</div>
+
+<div class="card chart-card">
+  <div class="header">
+    <h5>Sales Details</h5>
+    <select [(ngModel)]="selectedMonth" (change)="updateDashboard()">
+      <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+    </select>
+  </div>
+  <canvas #salesChart></canvas>
+</div>
+
+<div class="card table-card">
+  <div class="header">
+    <h5>Deals Details</h5>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Location</th>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let deal of filteredDeals">
+        <td>{{ deal.product }}</td>
+        <td>{{ deal.location }}</td>
+        <td>{{ deal.date }}</td>
+        <td>{{ deal.price | currency }}</td>
+        <td><span class="status">{{ deal.status }}</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

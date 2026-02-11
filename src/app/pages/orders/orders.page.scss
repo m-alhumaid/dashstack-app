@@ -1,0 +1,179 @@
+.orders-container {
+  padding: 30px;
+  background: #f4f6fa;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.filter-bar {
+  display: flex;
+  height: 4rem;
+  top: 167px;
+  left: 270px;
+  opacity: 1;
+  border-radius: 10px;
+  border-width: 0.6px;
+  margin-bottom: 20px;
+  align-items: center;
+
+
+ .filter-item{
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: white;
+    height: 4rem;
+    width: 11rem;
+    align-items: center;
+    display: flex;
+    background: #F9F9FB;
+
+  }
+
+  .reset-btn {
+    background: transparent;
+    color: #ff4d4f;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}
+
+table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+
+  th, td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+  }
+
+  th {
+    background: #fafafa;
+    font-weight: 600;
+  }
+
+  .sortable {
+    cursor: pointer;
+  }
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  width: 90px;
+  display: block;
+  text-align: center;
+}
+
+.Completed {
+  background: #e6f7f1;
+  color: #00a86b;
+}
+
+.Processing {
+  background: #f3e8ff;
+  color: #7b61ff;
+}
+
+.Rejected {
+  background: #ffe6e6;
+  color: #ff4d4f;
+}
+
+.On\ Hold {
+  background: #fff3e0;
+  color: #ff9800;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+  }
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pagination-controls {
+  display: flex;
+}
+
+.nav-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  border-radius: 8px 0px;
+  cursor: pointer;
+}
+
+.nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.nav-btn.prev {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.nav-btn.next {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.filter-item input {
+  border: none;  
+  outline: none;   
+  box-shadow: none;
+  width: 13rem; 
+  padding: 4px 12px;
+  border-radius: 6px;
+  background: #F9F9FB;
+}
+
+.filter-item input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.filter-item input,
+.filter-item select,
+.filter-item button {
+  border: none; 
+  outline: none;
+  box-shadow: none;
+  background: #F9F9FB;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;  
+  align-items: center;
+}
+
+.filter-bar .filter-item:not(:first-child) {
+  justify-content: center;
+}
