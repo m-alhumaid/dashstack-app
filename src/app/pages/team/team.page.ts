@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule],
   template: `
+  <div class="px-4 py-4">
     <div class="d-flex align-items-center justify-content-between mb-3">
       <h4 class="m-0">Team</h4>
       <a routerLink="/team/add" class="btn btn-primary">Add Member</a>
@@ -19,6 +20,7 @@ import { RouterModule } from '@angular/router';
           <small>{{ m.role }}</small>
         </div>
       </div>
+    </div>
     </div>
   `
 })

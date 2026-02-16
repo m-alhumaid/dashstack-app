@@ -1,19 +1,23 @@
-<h3>Favorites</h3>
+<div class="px-4 py-4">
 
-<div class="products">
-  <div class="card product" *ngFor="let p of products">
-    <img [src]="p.img" [alt]="p.name" />
-    
-    <div class="product-info">
-      <h6>{{ p.name }}</h6>
-      <div class="price">$ {{ p.price }}</div>
-      <div class="stars">★★★★★</div>
-    </div>
-
-    <div class="heart" (click)="toggleFavorite(p)">
-      {{ p.isFavorite ? '♥' : '♡' }}
-    </div>
+  <h3>Favorites</h3>
+  
+  <div class="products">
+    <div class="card product" *ngFor="let p of products">
+      <img [src]="p.img" [alt]="p.name" />
+      
+      <div class="product-info">
+        <h6>{{ p.name }}</h6>
+        <div class="price">$ {{ p.price }}</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      
+      <div class="heart" (click)="toggleFavorite(p)">
+        {{ p.isFavorite ? '♥' : '♡' }}
+      </div>
       <button class="edit-btn">Edit Product</button>
-
+      
+    </div>
   </div>
+  
 </div>

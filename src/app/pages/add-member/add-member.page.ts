@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   template: `
+  <div class="px-4 py-4">
     <h4 class="mb-4">Add Team Member</h4>
     <div class="card p-4 shadow-sm">
 
@@ -59,6 +60,7 @@ import { FormsModule } from '@angular/forms';
         <button class="btn btn-primary px-5" (click)="addMember()">Add Now</button>
       </div>
 
+    </div>
     </div>
   `,
   styles: [`

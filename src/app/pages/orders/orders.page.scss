@@ -1,5 +1,4 @@
 .orders-container {
-  padding: 30px;
   background: #f4f6fa;
 }
 
@@ -8,60 +7,79 @@ h2 {
   font-weight: 600;
 }
 
+
 .filter-bar {
   display: flex;
-  height: 4rem;
-  top: 167px;
-  left: 270px;
-  opacity: 1;
-  border-radius: 10px;
-  border-width: 0.6px;
-  margin-bottom: 20px;
   align-items: center;
-
-
- .filter-item{
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    background: white;
-    height: 4rem;
-    width: 11rem;
-    align-items: center;
-    display: flex;
-    background: #F9F9FB;
-
-  }
-
-  .reset-btn {
-    background: transparent;
-    color: #ff4d4f;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
+  margin-bottom: 20px;
 }
 
+.filter-bar .filter-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 11rem;
+  background: #F9F9FB;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 0;
+}
+
+.filter-bar .filter-item:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.filter-bar .filter-item:last-child {
+  border-right: 1px solid #ddd;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.filter-bar .reset-btn {
+  background: transparent;
+  color: #ff4d4f;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-item input,
+.filter-item select,
+.filter-item button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: #F9F9FB;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+.filter-item input{
+  width: 100%;
+}
 table {
   width: 100%;
   background: white;
   border-collapse: collapse;
   border-radius: 10px;
   overflow: hidden;
-
-  th, td {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-  }
-
-  th {
-    background: #fafafa;
-    font-weight: 600;
-  }
-
-  .sortable {
-    cursor: pointer;
-  }
 }
+
+table th,
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+table th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+.sortable {
+  cursor: pointer;
+}
+
 
 .status {
   padding: 4px 10px;
@@ -93,20 +111,6 @@ table {
   color: #ff9800;
 }
 
-.pagination {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  button {
-    padding: 6px 12px;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    background: white;
-    cursor: pointer;
-  }
-}
 
 .pagination-wrapper {
   display: flex;
@@ -123,57 +127,21 @@ table {
   height: 36px;
   border: 1px solid #e5e7eb;
   background: white;
-  border-radius: 8px 0px;
   cursor: pointer;
-}
-
-.nav-btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
+  border-radius: 0;
 }
 
 .nav-btn.prev {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .nav-btn.next {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-.filter-item input {
-  border: none;  
-  outline: none;   
-  box-shadow: none;
-  width: 13rem; 
-  padding: 4px 12px;
-  border-radius: 6px;
-  background: #F9F9FB;
-}
 
-.filter-item input:focus {
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
-
-.filter-item input,
-.filter-item select,
-.filter-item button {
-  border: none; 
-  outline: none;
-  box-shadow: none;
-  background: #F9F9FB;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;  
-  align-items: center;
-}
-
-.filter-bar .filter-item:not(:first-child) {
-  justify-content: center;
+.nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }

@@ -1,96 +1,100 @@
-<div class="orders-container">
+<div class="px-4 py-4">
 
-  <h2>Order Lists</h2>
-
-  <div class="filter-bar">
-
-    <div class="filter-item">
-      <input
+  <div class="orders-container">
+    
+    <h2>Order Lists</h2>
+    
+    <div class="filter-bar">
+      
+      <div class="filter-item">
+        <input
         type="text"
         placeholder="Search"
         [(ngModel)]="searchText"
-      />
+        />
+      </div>
+      
+      <div class="filter-item">
+        <select [(ngModel)]="filterType">
+          <option value="All">Order Type </option>
+          <option value="Electric">Electric</option>
+          <option value="Book">Book</option>
+          <option value="Medicine">Medicine</option>
+          <option value="Mobile">Mobile</option>
+          <option value="Watch">Watch</option>
+        </select>
+      </div>
+      
+      <div class="filter-item">
+        <select [(ngModel)]="filterStatus">
+          <option value="All">Order Status </option>
+          <option value="Completed">Completed</option>
+          <option value="Processing">Processing</option>
+          <option value="Rejected">Rejected</option>
+          <option value="On Hold">On Hold</option>
+        </select>
+      </div>
+      
+      <div class="filter-item">
+        <button class="reset-btn" (click)="resetFilters()">
+          Reset Filter
+        </button>
+      </div>
+      
     </div>
-
-    <div class="filter-item">
-      <select [(ngModel)]="filterType">
-        <option value="All">Order Type </option>
-        <option value="Electric">Electric</option>
-        <option value="Book">Book</option>
-        <option value="Medicine">Medicine</option>
-        <option value="Mobile">Mobile</option>
-        <option value="Watch">Watch</option>
-      </select>
-    </div>
-
-    <div class="filter-item">
-      <select [(ngModel)]="filterStatus">
-        <option value="All">Order Status </option>
-        <option value="Completed">Completed</option>
-        <option value="Processing">Processing</option>
-        <option value="Rejected">Rejected</option>
-        <option value="On Hold">On Hold</option>
-      </select>
-    </div>
-
-    <div class="filter-item">
-      <button class="reset-btn" (click)="resetFilters()">
-        Reset Filter
-      </button>
-    </div>
-
-  </div>
-
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Date</th>
-        <th>Type</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr *ngFor="let order of paginatedOrders">
-        <td>{{ order.id }}</td>
-        <td>{{ order.name }}</td>
-        <td>{{ order.address }}</td>
-        <td>{{ order.date }}</td>
-        <td>{{ order.type }}</td>
-        <td>
-          <span class="status" [ngClass]="order.status">
-            {{ order.status }}
-          </span>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="pagination-wrapper">
-
-    <div class="page-info">
-      Showing {{ startItem }} - {{ endItem }} of {{ totalItems }}
-    </div>
-
-    <div class="pagination-controls">
-      <button
+    
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr *ngFor="let order of paginatedOrders">
+          <td>{{ order.id }}</td>
+          <td>{{ order.name }}</td>
+          <td>{{ order.address }}</td>
+          <td>{{ order.date }}</td>
+          <td>{{ order.type }}</td>
+          <td>
+            <span class="status" [ngClass]="order.status">
+              {{ order.status }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="pagination-wrapper">
+      
+      <div class="page-info">
+        Showing {{ startItem }} - {{ endItem }} of {{ totalItems }}
+      </div>
+      
+      <div class="pagination-controls">
+        <button
         class="nav-btn prev"
         (click)="previousPage()"
         [disabled]="currentPage === 1">
         &lt;
       </button>
-
+      
       <button
-        class="nav-btn next"
-        (click)="nextPage()"
-        [disabled]="currentPage === totalPages">
-        &gt;
-      </button>
-    </div>
-
+      class="nav-btn next"
+      (click)="nextPage()"
+      [disabled]="currentPage === totalPages">
+      &gt;
+    </button>
   </div>
+  
+</div>
+
+</div>
 
 </div>
